@@ -45,14 +45,14 @@
     margin-left: 5px;
 }
 
-.location-tempo {
+.location-tempo > span{
     user-select: none;
     cursor: pointer;
     
     transition: 0.4s;
 }
 
-.location-tempo:hover {
+.location-tempo > span:hover {
     color: #ffffffb2;
 }
 
@@ -87,4 +87,33 @@
     border-bottom-left-radius: 0;
 
     cursor: pointer;
+}
+
+@media only screen and (max-width: 930px){
+    .header-logo-text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .app-header {
+        height: 1.5em;
+    }
+
+    .location-country {
+        display: none;
+    }
+
+    /* .search-form {
+        justify-content: flex-end;
+    }
+
+    .search-input {
+        width: 50%;
+    }
+
+    .search-button {
+        width: 15%;
+        padding: 0;
+    } */
 }

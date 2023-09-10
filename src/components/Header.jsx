@@ -28,9 +28,10 @@ function Header(props) {
                 </h1>
             </div>
             <div className="header-location">
-                <h1 className="location-text font-large">{location.name}, {location.country},</h1>
+                <h1 className="location-text font-large">{location.name}<span className="location-country">, {location.country}</span></h1>
                 <h1 onClick={switchFormatTempo} className="location-tempo font-large">
-                    {`${current[tempFormat]}°${tempFormat === "temp_c" ? 'c' : 'F'} `}
+                    , <span>{current[tempFormat]}°
+                {tempFormat === "temp_c" ? 'c' : 'F'}</span>
                  </h1>
                 
                 <img src={current.condition.icon} />

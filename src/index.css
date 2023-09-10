@@ -16,3 +16,18 @@
 .font-logo { font-size: 2.15em; }
 .font-large { font-size: 1.75em; }
 .font-button { font-size: 1.1em; }
+.font-tab { font-size: 1.5em;}
+
+@media only screen and (max-width: 768px) {
+    .font-large {
+      font-size: 1em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .font-button {
+      font-size: 0.65em;
+    }
+    .font-tab {
+      font-size: 1em;
+    }
+}

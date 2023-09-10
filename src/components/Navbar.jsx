@@ -10,12 +10,12 @@ function Navbar(props) {
             key={index}
             onClick={(event) => props.switchTab(event, tab)}
             id={tab} 
-            className="navbar-tab selected-tab">{tab}</a> : 
+            className="navbar-tab font-tab selected-tab">{tab}</a> : 
             <a 
             key={index}
             onClick={(event) => props.switchTab(event, tab)} 
             id={tab} 
-            className="navbar-tab">{tab}</a>
+            className="navbar-tab font-tab">{tab}</a>
         )
     })
     return (
