@@ -17,9 +17,9 @@ function App() {
 
   React.useEffect(() => {
     console.log("Updated")
-    fetch(`https://api.weatherapi.com/v1/current.json?q=${userData.q}&lang=${userData.lang}&key=4c5ff613e6c54a329d6113323231009`)
-    .then(response => response.json())
-    .then(data => changeWeatherResonse(data))
+    // fetch(`https://api.weatherapi.com/v1/current.json?q=${userData.q}&lang=${userData.lang}&key=4c5ff613e6c54a329d6113323231009`)
+    // .then(response => response.json())
+    // .then(data => changeWeatherResonse(data))
   }, [userData])
 
   function changeLocation(event, location) {
@@ -32,7 +32,7 @@ function App() {
   }
   function switchTab(event, id) {
       event.preventDefault();
-      changeSelectedTab(prevSelectedTab => id)
+      changeSelectedTab(id)
   }
 
   return (
@@ -43,7 +43,7 @@ function App() {
           changeLocation={changeLocation}
         />
         <Navbar selectedTab={selectedTab} switchTab={switchTab}/>
-        <Main />
+        <Main currentTab={selectedTab}/>
     </div>
   )
 }
