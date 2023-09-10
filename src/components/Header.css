@@ -28,7 +28,6 @@
 .header-logo > h1 {
     margin: 0;
     margin-top: 3px;
-    font-size: 2.15em;
     color: rgb(206, 220, 224);
 }
 
@@ -39,25 +38,30 @@
 
 .header-location > h1 {
     margin: 0;
-    font-size: 1.75em;
 }
 
 .header-location > img {
     height: 100%;
-    /* margin-bottom: 15px; */
     margin-left: 5px;
+}
+
+.location-tempo {
+    user-select: none;
+    cursor: pointer;
+    
+    transition: 0.4s;
+}
+
+.location-tempo:hover {
+    color: #ffffffb2;
 }
 
 .search-form {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 5px;
 }
 
 .search-form > input, button {
     font-family: 'Rokkitt', serif;
-    font-size: 1.1em;
 }
 
 .search-form > .search-input { 
@@ -66,6 +70,10 @@
     border: 1px solid rgb(253, 190, 17);
     
     border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    padding-left: 10px;
 }
 
 .search-form > .search-button {
@@ -73,6 +81,10 @@
     background: rgb(253, 190, 17);
     border: none;
     border-radius: 6px;
+    padding: 5px 10px;
+
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 
     cursor: pointer;
 }

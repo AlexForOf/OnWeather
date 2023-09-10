@@ -1,0 +1,1 @@
+export default ["Realtime", "Forecast", "Future", "History"]

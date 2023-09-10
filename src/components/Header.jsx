@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../weather-logo.png'
+import logo from '../images/weather-logo.png'
 import './Header.css';
 
 function Header(props) {
@@ -12,19 +12,25 @@ function Header(props) {
     function handleSearch(event) {
         setPlace(event.target.value)
     }
+    function switchFormatTempo(event) {
+        changeTempFormat(prevTempFormat => {
+            return (tempFormat === "temp_c" ? "temp_f" : "temp_c")
+        })
+    }
 
     return (
         <header className="app-header">
             <div className="header-logo">
                 <img src={logo} />
-                <h1 className="header-logo-text">
+                <h1 className="header-logo-text font-logo">
                     <span className="logo-yellow logo-initials">On</span>
-                    <span className="logo-initials">W</span>eather</h1>
+                    <span className="logo-initials">W</span>eather
+                </h1>
             </div>
             <div className="header-location">
-                <h1 className="location-text">{location.name}, {location.country}</h1>
-                <h1 className="location-tempo">, {current[tempFormat]}°
-                {tempFormat === "temp_c" ? 'c' : 'F'}
+                <h1 className="location-text font-large">{location.name}, {location.country},</h1>
+                <h1 onClick={switchFormatTempo} className="location-tempo font-large">
+                    {`${current[tempFormat]}°${tempFormat === "temp_c" ? 'c' : 'F'} `}
                  </h1>
                 
                 <img src={current.condition.icon} />
@@ -32,13 +38,13 @@ function Header(props) {
             <div className="header-search">
                 <form className="search-form" onSubmit={(event) => changeLocation(event, place)}>
                     <input 
-                    className="search-input"
+                    className="search-input font-button"
                     placeholder="City"
                     name="city"
                     value={place}
                     onChange={handleSearch}
                      />
-                    <button className="search-button">Search</button>
+                    <button className="search-button font-button">🔎</button>
                 </form>
             </div>
         </header>

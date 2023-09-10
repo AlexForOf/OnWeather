@@ -1,11 +1,14 @@
-import './App.css'
-import React from 'react'
-import data from './data'
+import './App.css';
+import React from 'react';
+import data from './data/data';
 
-import Header from './components/Header'
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Main from './components/Main';
 
 function App() {
 
+  const [selectedTab, changeSelectedTab] = React.useState("Realtime")
   const [weatherResponse, changeWeatherResonse] = React.useState(data)
   const [userData, changeUserData] = React.useState({
     q: "London",
@@ -14,11 +17,10 @@ function App() {
 
   React.useEffect(() => {
     console.log("Updated")
-    fetch(`https://api.weatherapi.com/v1/current.json?q=${userData.q}&lang=${userData.lang}&key=4c5ff613e6c54a329d6113323231009`)
-    .then(response => response.json())
-    .then(data => changeWeatherResonse(data))
+    // fetch(`https://api.weatherapi.com/v1/current.json?q=${userData.q}&lang=${userData.lang}&key=4c5ff613e6c54a329d6113323231009`)
+    // .then(response => response.json())
+    // .then(data => changeWeatherResonse(data))
   }, [userData])
-  console.log(userData)
 
   function changeLocation(event, location) {
     event.preventDefault();
@@ -28,6 +30,10 @@ function App() {
       ['q']: location
     })})
   }
+  function switchTab(event, id) {
+      event.preventDefault();
+      changeSelectedTab(prevSelectedTab => id)
+  }
 
   return (
     <div className='application'>
@@ -36,6 +42,8 @@ function App() {
           current={weatherResponse.current}
           changeLocation={changeLocation}
         />
+        <Navbar selectedTab={selectedTab} switchTab={switchTab}/>
+        <Main />
     </div>
   )
 }
