@@ -1,5 +1,5 @@
 import React from "react";
-import './HighestTemp.css';
+import './HIghestTemp.css';
 
 function HighestTemp(props) {
     console.log(props)
