@@ -1,5 +1,8 @@
 import React from "react";
-import WeatherCurrent from "./WeatherCurrent";
+
+import WeatherCurrent from "./realtime-comp/WeatherCurrent";
+import AirQuality from "./realtime-comp/AirQuality";
+
 import './Realtime.css';
 
 function Realtime(props) {
@@ -19,9 +22,11 @@ function Realtime(props) {
                 isImperial={isImperial}
                 switchIsImperial={switchIsImperial}
                 />
-                <div className="weather-container weather-air-container">
-                    <div className=""></div>
-                </div>
+                <AirQuality 
+                info={props.info}
+                isImperial={isImperial}
+                switchIsImperial={switchIsImperial}
+                />
             </div>
         </div>
     )

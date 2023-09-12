@@ -1,4 +1,4 @@
-.current-container-left {
+/* .current-container-left {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-}
+} */
 
 .left-current-time {
     display: flex;
@@ -110,14 +110,14 @@
 
 @media only screen and (max-width: 768px) {
     .current-container-left {
-        width: auto;
+        /* width: auto; */
         border-bottom: 1px solid rgba(202, 202, 202, 0.61);
         justify-content: center;
         /* align-items: center; */
     }
-    .current-container-right {
+    /* .current-container-right {
         width: auto;
-    }
+    } */
     .right-title {
         text-align: start;
     }

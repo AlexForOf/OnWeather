@@ -21,9 +21,9 @@ function App() {
     // .then(response => response.json())
     // .then(data => changeWeatherResonse(data))
 
-    fetch(`https://api.weatherapi.com/v1/forecast.json?q=${userData.q}&days=1&lang=${userData.lang}&alerts=yes&aqi=yes&key=4c5ff613e6c54a329d6113323231009`)
-    .then(response => response.json())
-    .then(data => changeWeatherResonse(data))
+    // fetch(`https://api.weatherapi.com/v1/forecast.json?q=${userData.q}&days=1&lang=${userData.lang}&alerts=yes&aqi=yes&key=4c5ff613e6c54a329d6113323231009`)
+    // .then(response => response.json())
+    // .then(data => changeWeatherResonse(data))
   }, [userData])
 
   function changeLocation(event, location) {

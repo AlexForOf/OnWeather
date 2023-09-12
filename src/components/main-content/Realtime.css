@@ -1,7 +1,6 @@
 .container-weather {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .weather-upper {
@@ -18,6 +17,12 @@
     /* border: 1px solid; */
     border-radius: 6px;
     gap: 10px;
+}
+
+.weather-container-part {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 @media only screen and (max-width: 1301px) { 
@@ -39,5 +44,9 @@
 @media only screen and (max-width: 768px) {
     .weather-container {
         flex-direction: column;
+    }
+
+    .weather-container-part {
+        width: auto;
     }
 }

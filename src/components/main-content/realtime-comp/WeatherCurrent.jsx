@@ -25,7 +25,7 @@ function WeatherCurrent(props) {
 
     return (
         <div className="weather-container weather-current-container">
-            <div className="current-container-left">
+            <div className="current-container-left weather-container-part">
                         <div className="left-current-time">
                             <h1 className="time-label font-label">CURENT WEATHER</h1>
                             <p className="time-lastUPD font-button">
@@ -49,7 +49,7 @@ function WeatherCurrent(props) {
                         </div>
                         <h2 className="left-current-condition font-label">{text}</h2>
                     </div>
-                    <div className="current-container-right">
+                    <div className="current-container-right weather-container-part">
                         <h1 className="right-title font-label">DETAILS</h1>
                         <div className="right-details-list">
                             <div className="details-list-element">
