@@ -1,12 +1,57 @@
 import React from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
 import './AirQuality.css';
 
 function AirQuality(props) {
 
+    
+    
     const todayDate = props.info.current.last_updated;
     const slicedDate = todayDate.slice(todayDate.indexOf('-') + 1, todayDate.indexOf(' '))
 
     const {air_quality} = props.info.current
+
+    const test = Object.values(air_quality)
+
+    console.log(test)
+    
+    const chartLabels = {
+        labels: ["CO", "NO2", "O3", "SO2", "PM10", "PM2.5"],
+        datasets: [
+            {
+                label: "Coef. of matter",
+                data: Object.values(air_quality),
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                  'rgba(255, 153, 0, 0.2)',
+                  'rgb(153, 204, 255, 0.2)',
+
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                  'rgba(255, 153, 0, 0.2)',
+                  'rgb(153, 204, 255, 0.2)',
+                ],
+                borderWidth: 1
+            }
+        ]
+    }
+
+    chartLabels.datasets.data = test;
 
     return (
         <div className="weather-container weather-air-container">
@@ -20,7 +65,8 @@ function AirQuality(props) {
                 </div>
                 <div className="container-left-chart">
                     <div className="left-chart-actual">
-                        <h1 className="chart-actual-placeholder">Here goes chart</h1>
+                        <Doughnut data={chartLabels} />
+                        {/* <h1 className="chart-actual-placeholder">Here goes chart</h1> */}
                     </div>
                 </div>
                 <div className="container-left-description">

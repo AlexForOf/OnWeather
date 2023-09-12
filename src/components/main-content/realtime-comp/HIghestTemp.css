@@ -2,7 +2,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    margin-left: 24%;
+    margin-left: 20%;
     margin-top: 10px;
 }
 
@@ -34,7 +34,8 @@
 }
 
 .description-text-value{
-    font-size: 1.1em;
+    margin: 0;
+    font-size: 1em;
 }
 
 @media only screen and (max-width: 1084px) {

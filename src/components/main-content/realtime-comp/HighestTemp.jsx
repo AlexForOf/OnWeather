@@ -65,9 +65,9 @@ function HighestTemp(props) {
                 <div className="peek-right-description">
                     <h1 className="right-description-text">
                         <span className="description-text-title font-regular">
-                            {props.isMaximum ? "Day's average weather: " : "Night's average weather: "}
+                            {props.isMaximum ? "Day's avgerage weather: " : "Night's average weather: "}
                         </span>
-                        <span className="description-text-value font-bold">{condition.text}</span>
+                        <p className="description-text-value font-bold">{condition.text}</p>
                     </h1>
                 </div>
             </div>
