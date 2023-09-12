@@ -1,6 +1,43 @@
-.main-container {
-    display: flex;
-}
 .container-weather {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.weather-upper {
+    display: flex;
+    gap: 10px;
     width: 100%;
+}
+
+.weather-container {
+    padding: 10px;
+    display: flex;
+    width: 50%;
+    background: #FFFFFF;
+    /* border: 1px solid; */
+    border-radius: 6px;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 1301px) { 
+    .container-weather {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 1085px) {
+    .weather-upper {
+        flex-direction: column;
+    }
+
+    .weather-container {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .weather-container {
+        flex-direction: column;
+    }
 }

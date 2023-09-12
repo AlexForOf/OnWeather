@@ -45,14 +45,14 @@
     margin-left: 5px;
 }
 
-.location-tempo > span{
+.location-tempo > .tempo-switch-system {
     user-select: none;
     cursor: pointer;
     
     transition: 0.4s;
 }
 
-.location-tempo > span:hover {
+.location-tempo > .tempo-switch-system:hover {
     color: #ffffffb2;
 }
 

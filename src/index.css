@@ -16,7 +16,16 @@
 .font-logo { font-size: 2.15em; }
 .font-large { font-size: 1.75em; }
 .font-button { font-size: 1.1em; }
-.font-tab { font-size: 1.5em;}
+.font-tab { font-size: 1.5em; }
+.font-label { font-size: 1.2em; }
+.font-title { font-size: 1.5em; }
+.font-content { font-size: 1.3em; }
+
+.font-thin { font-weight: 300; }
+.font-regular { font-weight: 400; }
+.font-bold { font-weight: 600; }
+.font-fat { font-weight: 800; }
+
 
 @media only screen and (max-width: 768px) {
     .font-large {

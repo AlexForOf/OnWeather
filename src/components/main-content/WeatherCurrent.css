@@ -1,0 +1,128 @@
+.current-container-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.current-container-right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.left-current-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-current-time > .time-label, .time-lastUPD {
+    margin: 0;
+    text-align: start;
+    font-weight: 400;
+}
+
+.the-time {
+    font-weight: 600;
+}
+
+.left-current-temp {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.current-temp-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-left: 10px;
+}
+
+.current-temp-numbers > .temp-numbers-main, .temp-numbers-feel {
+    margin: 0;
+}
+
+.temp-numbers-main {
+    font-size: 3em;
+
+    user-select: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.temp-numbers-feel {
+    font-weight: 400;
+}
+
+.left-current-condition {
+    text-align: start;
+    font-weight: 400;
+    margin: 0;
+}
+
+.temp-numbers-main:hover { 
+    color: #c9c9c9;
+}
+
+.temp_system {
+    font-size: 1em;
+}
+
+.right-title {
+    margin: 5px 0;
+    /* margin-bottom: 10px; */
+    text-align: end;
+    font-weight: 600;
+}
+
+.right-details-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.details-list-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.last-list-element {
+    border: none;
+}
+
+.list_element_title, .list_element_value {
+    margin: 0;
+}
+.list_element_title {
+    font-size: 22em;
+}
+
+.right_details-list > hr {
+    border: 1px solid gray;
+}
+
+.list-wind-direction {
+    color: green;
+}
+
+@media only screen and (max-width: 768px) {
+    .current-container-left {
+        width: auto;
+        border-bottom: 1px solid rgba(202, 202, 202, 0.61);
+        justify-content: center;
+        /* align-items: center; */
+    }
+    .current-container-right {
+        width: auto;
+    }
+    .right-title {
+        text-align: start;
+    }
+    .left-current-temp {
+        align-items: center;
+        justify-content: center;
+    }
+}
