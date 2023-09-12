@@ -1,13 +1,26 @@
 .container-weather {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.weather-upper {
+.weather-two-parts {
     display: flex;
     gap: 10px;
     width: 100%;
 }
+
+/* .weather-upper {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.weather-middle {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+} */
 
 .weather-container {
     padding: 10px;
@@ -33,6 +46,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
     gap: 10px;
 }
 
@@ -54,7 +68,7 @@
 }
 
 @media only screen and (max-width: 1085px) {
-    .weather-upper {
+    .weather-two-parts {
         flex-direction: column;
     }
 
@@ -72,7 +86,7 @@
     .right-title-text {
         text-align: start;
     }
-    
+
     .weather-container {
         flex-direction: column;
     }

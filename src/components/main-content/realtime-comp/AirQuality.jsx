@@ -2,14 +2,12 @@ import React from "react";
 import './AirQuality.css';
 
 function AirQuality(props) {
-    console.log(props)
 
     const todayDate = props.info.current.last_updated;
     const slicedDate = todayDate.slice(todayDate.indexOf('-') + 1, todayDate.indexOf(' '))
 
     const {air_quality} = props.info.current
 
-    console.log(air_quality)
     return (
         <div className="weather-container weather-air-container">
             <div className="air-container-left container-part-left weather-container-part">

@@ -57,9 +57,9 @@
 .temp_system {
     font-size: 1em;
 }
-
 .right-title-text {
-    margin: 5px 0;
+    margin: 0;
+    margin-bottom: 5px;
     /* margin-bottom: 10px; */
     text-align: end;
     font-weight: 600;
@@ -81,9 +81,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .right-title-text {
-        text-align: start;
-    }
     .left-current-temp {
         align-items: center;
         justify-content: center;
