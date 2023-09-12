@@ -4,7 +4,6 @@ import WeatherCurrent from "./realtime-comp/WeatherCurrent";
 import AirQuality from "./realtime-comp/AirQuality";
 
 import HighestTemp from "./realtime-comp/HighestTemp";
-import LowestTemp from "./realtime-comp/LowestTemp";
 import './Realtime.css';
 
 import findAverageNightWeather from "./averageFunction";
