@@ -17,7 +17,6 @@ function AirQuality(props) {
 
     const test = Object.values(air_quality)
 
-    console.log(test)
     
     const chartLabels = {
         labels: ["CO", "NO2", "O3", "SO2", "PM10", "PM2.5"],
