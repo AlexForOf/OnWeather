@@ -2,3 +2,25 @@
     margin: 0;
     text-align: start;
 }
+
+.air-container-left {
+    justify-content: space-between;
+}
+
+.left-chart-actual {
+    height: auto;
+}
+
+.left-description-text {
+    margin: 0;
+    text-align: start;
+}
+
+.small-decimal {
+    /* margin-left: 2.5px; */
+    font-size: 0.65em;
+}
+
+.right-title-text {
+
+}

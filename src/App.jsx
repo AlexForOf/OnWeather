@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import data from './data/data';
+import data from './data/data1';
 
 import Header from './components/Header';
 import Navbar from './components/Navbar';
