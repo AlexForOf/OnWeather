@@ -65,7 +65,6 @@ function AirQuality(props) {
                 <div className="container-left-chart">
                     <div className="left-chart-actual">
                         <Doughnut data={chartLabels} />
-                        {/* <h1 className="chart-actual-placeholder">Here goes chart</h1> */}
                     </div>
                 </div>
                 <div className="container-left-description">

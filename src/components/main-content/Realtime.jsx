@@ -9,38 +9,34 @@ import './Realtime.css';
 import findAverageNightWeather from "./averageFunction";
 
 function Realtime(props) {
-    const [isImperial, changeIsImperial] = React.useState(false)
-
-    function switchIsImperial() {
-        changeIsImperial(prevIsImperial => !prevIsImperial)
-    }
-
     const forecastDay = props.info.forecast.forecastday[0];
     const {hour} = forecastDay;
     const avgNightCondition = findAverageNightWeather(hour);
 
+
+    console.log("Updated")
     return (
         <div className="container-weather">
             <div className="weather-two-parts weather-upper">
                 <WeatherCurrent 
                 info={props.info} 
-                isImperial={isImperial}
-                switchIsImperial={switchIsImperial}
+                isImperial={props.isImperial}
+                switchIsImperial={props.switchIsImperial}
                 />
                 <AirQuality 
                 info={props.info}
-                isImperial={isImperial}
-                switchIsImperial={switchIsImperial}
+                isImperial={props.isImperial}
+                switchIsImperial={props.switchIsImperial}
                 />
             </div>
             <div className="weather-two-parts weather-middle">
                 <HighestTemp 
-                isImperial={isImperial} 
+                isImperial={props.isImperial}
                 isMaximum={true}
                 forecastDay={forecastDay}
                 />
                 <HighestTemp 
-                isImperial={isImperial} 
+                isImperial={props.isImperial}
                 isMaximum={false}
                 forecastDay={forecastDay}
                 />

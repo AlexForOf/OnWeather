@@ -21,7 +21,7 @@ function WeatherCurrent(props) {
     const {text, icon} = props.info.current.condition;
     const timeNow = last_updated.slice(last_updated.indexOf(' '))
 
-    const isImperial = props.isImperial;
+    let isImperial = props.isImperial;
 
     return (
         <div className="weather-container weather-current-container">
