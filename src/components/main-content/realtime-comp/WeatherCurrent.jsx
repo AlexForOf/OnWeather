@@ -33,6 +33,7 @@ function WeatherCurrent(props) {
                             </p>
                         </div>
                         <div className="left-current-temp">
+                            <div className="current-temp-inner">
                             <img src={icon} />
                             <div className="current-temp-numbers">
                                 <h1
@@ -46,6 +47,8 @@ function WeatherCurrent(props) {
                                     <span className="temp_system">{isImperial ? "f" : "c"}</span>
                                 </h2>
                             </div>
+                            </div>
+                            
                         </div>
                         <h2 className="left-current-condition font-label">{text}</h2>
                     </div>

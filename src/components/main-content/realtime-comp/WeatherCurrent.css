@@ -80,6 +80,20 @@
     color: green;
 }
 
+.current-container-right {
+    gap: 25px;
+}
+
+.current-temp-inner {
+    display: flex;
+}
+
+@media only screen and (max-width: 1141px) { 
+    .current-container-right {
+        gap: 0;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .left-current-temp {
         align-items: center;

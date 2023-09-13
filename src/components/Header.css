@@ -1,4 +1,7 @@
 .app-header {
+    max-width: 1280px;
+    margin: 0 auto;
+    
     height: 3em;
     background: black;
 
@@ -6,6 +9,10 @@
     justify-content: space-between;
 
     padding: 10px 10px;
+}
+
+.header-outer {
+    background: black;
 }
 
 .logo-yellow { 
