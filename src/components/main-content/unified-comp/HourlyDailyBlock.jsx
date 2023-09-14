@@ -5,6 +5,8 @@ function HourlyDailyBlock(props) {
 
     console.log(props.info)
 
+    const {isImperial} = props;
+
     const [isVisibleDetails, changeIsVisibleDetails] = React.useState(false)
 
     const {text, icon} = props.info.condition;
@@ -26,18 +28,19 @@ function HourlyDailyBlock(props) {
 
     return (
         <div 
-        className="hourly-dailyblock-container"
-        onClick={switchVisibleDetails}
-        >
-            <div className="dailyblock-container-head">
+        className="hourly-dailyblock-container">
+            <div 
+            className="dailyblock-container-head"
+            onClick={switchVisibleDetails}
+            >
                 <div className="container-head-left">
                     <div className="head-left-weather-container">
                         <img className="left-weather-icon" src={icon} />
                         <div className="left-weather-text-container">
                             <h1 className="hourdaily-text left-weather-tempo">
-                                {temp_c}°c
+                                {isImperial ? `${temp_f}°f` : `${temp_c}°c`}
                             </h1>
-                            <h3 className="hourdaily-text left-weather-text font-regular">
+                            <h3 className="hourdaily-text left-weather-text font-weather font-regular">
                                 {text}
                             </h3>
                         </div>
@@ -62,7 +65,7 @@ function HourlyDailyBlock(props) {
                             Wind speed:
                         </h3>
                         <h2 className="hourdaily-text bottom-element-value">
-                            {wind_kph} km/h
+                            {isImperial ? `${wind_mph} m/h` : `${wind_kph} km/h`}
                         </h2>
                     </div>
                     <div className="container-bottom-element bottom-element-first">
@@ -78,7 +81,7 @@ function HourlyDailyBlock(props) {
                             Windchill:
                         </h3>
                         <h2 className="hourdaily-text bottom-element-value">
-                            {windchill_c}°c
+                            {isImperial ? `${windchill_f}°f` : `${windchill_f}°c`}
                         </h2>
                     </div>
                     <div className="container-bottom-element">
@@ -113,7 +116,7 @@ function HourlyDailyBlock(props) {
                             Heat index:
                         </h3>
                         <h2 className="hourdaily-text bottom-element-value">
-                            {heatindex_c}°c
+                            {isImperial ? `${heatindex_f}°f` : `${heatindex_c}°c`}
                         </h2>
                     </div>
                     <div className="container-bottom-element">
@@ -121,7 +124,7 @@ function HourlyDailyBlock(props) {
                             Visibility:
                         </h3>
                         <h2 className="hourdaily-text bottom-element-value">
-                            {vis_km} km
+                            {isImperial ? `${vis_miles} m` : `${vis_km} km`}
                         </h2>
                     </div>
                     <div className="container-bottom-element">
@@ -129,7 +132,7 @@ function HourlyDailyBlock(props) {
                             Pressure:
                         </h3>
                         <h2 className="hourdaily-text bottom-element-value">
-                            {pressure_mb} mB
+                            {isImperial ? `${pressure_in} in` : `${pressure_mb} mB`}
                         </h2>
                     </div>
                 </section>

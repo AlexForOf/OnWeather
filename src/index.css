@@ -20,6 +20,7 @@
 .font-label { font-size: 1.2em; }
 .font-title { font-size: 1.5em; }
 .font-content { font-size: 1.3em; }
+.font-weather { font-size: 1.2em; }
 
 .font-thin { font-weight: 300; }
 .font-regular { font-weight: 400; }
@@ -38,5 +39,8 @@
     }
     .font-tab {
       font-size: 1em;
+    }
+    .font-weather {
+      font-size: 0.85em;
     }
 }

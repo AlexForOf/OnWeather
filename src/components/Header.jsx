@@ -1,5 +1,7 @@
 import React from "react";
 import logo from '../images/weather-logo.png'
+import { useContext } from "react";
+import { ImperialContext } from "../ImperialContext";
 import './Header.css';
 
 function Header(props) {
@@ -30,9 +32,11 @@ function Header(props) {
                 </div>
                 <div className="header-location">
                     <h1 className="location-text font-large">{location.name}<span className="location-country">, {location.country}</span></h1>
-                    <h1 onClick={switchFormatTempo} className="location-tempo font-large">
-                        , <span className="tempo-switch-system">{current[tempFormat]}°
-                    {tempFormat === "temp_c" ? 'c' : 'F'}</span>
+                    <h1 onClick={props.switchIsImperial} className="location-tempo font-large">
+                        , <span className="tempo-switch-system">{
+                            useContext(ImperialContext) ? current.temp_f : current.temp_c
+                        }°
+                    {useContext(ImperialContext) ? 'f' : 'c'}</span>
                     </h1>
                     <img src={current.condition.icon} />
                 </div>

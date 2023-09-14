@@ -4,13 +4,16 @@ import Realtime from "./main-content/Realtime";
 import Forecast from "./main-content/Forecast";
 import './Main.css';
 
+import { useContext } from "react";
+import { ImperialContext } from "../ImperialContext";
+
 
 function Main(props) {
     console.log(props.currentTab)
     const [tab, changeTab] = React.useState( (<Realtime info={props.info}/>) )
     const [info, rerenderInfo] = React.useState(props.info)
 
-    const [isImperial, changeIsImperial] = React.useState(false)
+    const isImperial = useContext(ImperialContext)
 
     function switchImperial() {
         changeIsImperial(prevIsImperial => !prevIsImperial)
