@@ -1,7 +1,7 @@
 import React from "react";
 import './DailyBlock.css';
 
-function DailyBlock({info, isImperial}) {
+function DailyBlock({info, isImperial, showHours}) {
     console.log(info)
 
     const weekDays = [
@@ -12,7 +12,7 @@ function DailyBlock({info, isImperial}) {
     const {day, astro, date} = info
 
     const {maxtemp_c, maxtemp_f, mintemp_c, mintemp_f,
-           maxwind_kph, maxwind_mph, totalsnow_cm,
+           maxwind_kph, maxwind_mph,
            avgtemp_c, avgtemp_f, avghumidity, 
            avgvis_km, avgvis_miles,
            condition} = day
@@ -34,14 +34,18 @@ function DailyBlock({info, isImperial}) {
                         <img src={condition.icon} className="left-weather-icon"/>
                         <div className="left-weather-info-container">
                             <div className="info-container-minmax-temp">
-                                <h1 className="weather-info-container-temp">{maxtemp_c}°c/</h1>
-                                <h3 className="min-temp">{mintemp_c}°c</h3>
+                                <h1 className="weather-info-container-temp">
+                                    {isImperial ? `${maxtemp_f}°f` : `${maxtemp_c}°c`}/
+                                </h1>
+                                <h3 className="min-temp">
+                                    {isImperial ? `${mintemp_f}°f` : `${mintemp_c}°c`}
+                                </h3>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="container-top-right">
-                    <h3 className="top-right-gotodetails">⮕</h3>
+                    <h3 className="top-right-gotodetails" onClick={(event) => showHours(event, info)}>⮕</h3>
                 </div>
             </div>
             <div className="daily-container-middle">
@@ -89,7 +93,41 @@ function DailyBlock({info, isImperial}) {
                 </section>
             </div>
             <div className="daily-container-bottom">
-                
+                <h3 className="hourly-text container-bottom-title">Details</h3>
+                <section className="container-bottom-grid">
+                    <div className="daily-container-bottom-element">
+                        <h3 className="hourly-text bottom-element-title font-regular">
+                            Temperature:
+                        </h3>
+                        <h2 className="hourly-text bottom-element-value">
+                            {isImperial ? `${avgtemp_f}°f` : `${avgtemp_c}°c`}
+                        </h2>
+                    </div>
+                    <div className="daily-container-bottom-element">
+                        <h3 className="hourly-text bottom-element-title font-regular">
+                            Humidity:
+                        </h3>
+                        <h2 className="hourly-text bottom-element-value">
+                            {avghumidity}%
+                        </h2>
+                    </div>
+                    <div className="daily-container-bottom-element">
+                        <h3 className="hourly-text bottom-element-title font-regular">
+                            Wind speed:
+                        </h3>
+                        <h2 className="hourly-text bottom-element-value">
+                            {isImperial ? `${maxwind_mph} m/h` : `${maxwind_kph} km/h`}
+                        </h2>
+                    </div>
+                    <div className="daily-container-bottom-element">
+                        <h3 className="hourly-text bottom-element-title font-regular">
+                            Vis:
+                        </h3>
+                        <h2 className="hourly-text bottom-element-value">
+                            {isImperial ? `${avgvis_miles} m/h` : `${avgvis_km} km/h`}
+                        </h2>
+                    </div>
+                </section>
             </div>
         </div>
     )

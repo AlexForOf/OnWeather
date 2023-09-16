@@ -6,11 +6,16 @@ function Future(props) {
     const {forecastday} = props.info.forecast
     console.log(forecastday)
 
+    function showHours(event, info) {
+        console.log(info)
+    }
+
     const dailyBlocks = forecastday.map((oneDay, index) => {
         return <DailyBlock 
             key={index}
             info={oneDay}
             isImperial={props.isImperial} 
+            showHours={showHours}
             />
     })
     return (
