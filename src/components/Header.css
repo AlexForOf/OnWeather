@@ -62,40 +62,6 @@
 .location-tempo > .tempo-switch-system:hover {
     color: #ffffffb2;
 }
-
-.search-form {
-    display: flex;
-}
-
-.search-form > input, button {
-    font-family: 'Rokkitt', serif;
-}
-
-.search-form > .search-input { 
-    color: #FFFFFF;
-    background: none;
-    border: 1px solid rgb(253, 190, 17);
-    
-    border-radius: 6px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-
-    padding-left: 10px;
-}
-
-.search-form > .search-button {
-    color: #FFFFFF;
-    background: rgb(253, 190, 17);
-    border: none;
-    border-radius: 6px;
-    padding: 5px 10px;
-
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 930px){
     .header-logo-text {
         display: none;

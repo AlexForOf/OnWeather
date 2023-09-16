@@ -2,6 +2,7 @@ import React from "react";
 import logo from '../images/weather-logo.png'
 import { useContext } from "react";
 import { ImperialContext } from "../ImperialContext";
+import Searchbar from "./Searchbar";
 import './Header.css';
 
 function Header(props) {
@@ -9,11 +10,7 @@ function Header(props) {
     const {location, current, changeLocation} = props;
 
     const [tempFormat, changeTempFormat] = React.useState("temp_c")
-    const [place, setPlace] = React.useState(location.name)
 
-    function handleSearch(event) {
-        setPlace(event.target.value)
-    }
     function switchFormatTempo(event) {
         changeTempFormat(prevTempFormat => {
             return (tempFormat === "temp_c" ? "temp_f" : "temp_c")
@@ -40,18 +37,7 @@ function Header(props) {
                     </h1>
                     <img src={current.condition.icon} />
                 </div>
-                <div className="header-search">
-                    <form className="search-form" onSubmit={(event) => changeLocation(event, place)}>
-                        <input 
-                        className="search-input font-button"
-                        placeholder="City"
-                        name="city"
-                        value={place}
-                        onChange={handleSearch}
-                        />
-                        <button className="search-button font-button">🔎</button>
-                    </form>
-                </div>
+                <Searchbar changeLocation={changeLocation} location={location}/>
             </header>
         </div>
         
