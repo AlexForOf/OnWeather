@@ -22,10 +22,10 @@ function Searchbar(props) {
             }
             const searchMatchDOM = (
                 <div style={style} className="results-box-element" onClick={(event) => changeLocation(event, match.name)}>
-                    <h2 className="box-element-name">
+                    <h2 className="box-element-name font-button">
                         {match.name}
                     </h2>
-                    <h2 className="box-element-state">
+                    <h2 className="box-element-state font-button">
                         {match.code}
                     </h2>
                 </div>
