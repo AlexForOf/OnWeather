@@ -1,11 +1,29 @@
 .container-future {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(2, 1fr);  
     gap: 10px;
 
     width: 100%;
 }
 
+.future-return {
+    position: fixed;
+    z-index: 1;
+    margin-left: -35px;
+    margin-top: -0;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    background: #000;
+    color: #FFFFFF;
+}
+
+.return-arrow {
+    margin: 0;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
 @media only screen and (max-width: 1285px) {
     .container-future {
         box-sizing: border-box;
