@@ -13,8 +13,6 @@ function Realtime(props) {
     const {hour} = forecastDay;
     const avgNightCondition = findAverageNightWeather(hour);
 
-
-    console.log("Updated")
     return (
         <div className="container-weather">
             <div className="weather-two-parts weather-upper">

@@ -21,7 +21,11 @@ function Searchbar(props) {
                 borderTop: index ? "1px solid rgba(68, 68, 68, 0.568)" : "none"
             }
             const searchMatchDOM = (
-                <div style={style} className="results-box-element" onClick={(event) => changeLocation(event, match.name)}>
+                <div
+                key={index} 
+                style={style} 
+                className="results-box-element" 
+                onClick={(event) => changeLocation(event, match.name)}>
                     <h2 className="box-element-name font-button">
                         {match.name}
                     </h2>
@@ -37,7 +41,6 @@ function Searchbar(props) {
     function showMatches(search) {
         if(search.length >= 1){
             const searchMatches = cities.filter((city, index) => {
-                console.log(index)
                 return city.name.match(search)
             })
             createMatchesDOM(searchMatches)    

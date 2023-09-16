@@ -2,14 +2,16 @@ import React from "react";
 
 import Realtime from "./main-content/Realtime";
 import Forecast from "./main-content/Forecast";
+import Future from "./main-content/Future";
 import './Main.css';
+
+import dailyResponse from '../data/dailyResponse.json'
 
 import { useContext } from "react";
 import { ImperialContext } from "../ImperialContext";
 
 
 function Main(props) {
-    console.log(props.currentTab)
     const [tab, changeTab] = React.useState( (<Realtime info={props.info}/>) )
     const [info, rerenderInfo] = React.useState(props.info)
 
@@ -19,7 +21,6 @@ function Main(props) {
         changeIsImperial(prevIsImperial => !prevIsImperial)
     }
 
-    console.log(props)
     React.useEffect(() => {
         if (props.currentTab === "Realtime") {
             changeTab(<Realtime 
@@ -30,6 +31,12 @@ function Main(props) {
         }else if (props.currentTab === "Forecast") {
             changeTab(<Forecast 
                 info={props.info}
+                isImperial={isImperial} 
+                switchIsImperial={switchImperial}
+                />)
+        }else if (props.currentTab === "Future") {
+            changeTab(<Future 
+                info={dailyResponse}
                 isImperial={isImperial} 
                 switchIsImperial={switchImperial}
                 />)

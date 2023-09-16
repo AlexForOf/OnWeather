@@ -2,7 +2,6 @@ import React from "react";
 import './WeatherCurrent.css';
 
 function WeatherCurrent(props) {
-    console.log(props)
     const { 
         last_updated,
         temp_c, 

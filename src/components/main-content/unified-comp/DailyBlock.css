@@ -1,0 +1,178 @@
+.daily-container {
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    gap: 10px;
+
+    height: fit-content;
+    position: relative;
+}
+
+.daily-container-top, .daily-container-middle, .daily-container-bottom {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.daily-container-top {
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+}
+
+.daily-container-middle {
+    flex-direction: column;
+    border-bottom: 1px solid lightgrey;
+}
+
+.container-top-left {
+    display: flex;
+    box-sizing: border-box;
+    gap: 35px;
+}
+
+.top-left-date {
+    margin-top: 5px;
+}
+
+.left-date-day, .left-date-week {
+    margin: 0;
+    text-align: start;
+}
+
+.left-date-week {
+    margin-top: -5px;
+    font-weight: 500;
+    color: lightslategray;
+}
+
+.top-left-weather {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.left-weather-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container-minmax-temp {
+    display: flex;
+    align-items: center;
+}
+
+.weather-info-container-temp {
+    margin: 0;
+}
+
+.min-temp {
+    margin: 0;
+    margin-top: 10px;
+    color: lightslategray;
+}
+
+.container-condition-text {
+    margin: 0;
+    text-align: start;
+}
+
+.container-top-right {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.top-right-gotodetails {
+    margin: 0;
+    transition: 0.4s;
+}
+
+.top-right-gotodetails:hover {
+    color: rgb(252, 193, 26);
+}
+
+.container-middle-astrology {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10px;
+}
+
+.container-middle-astrology-title {
+    margin: 0;
+    text-align: start;
+}
+
+.astrology-stickers-container {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.astrology-stickers {
+    color: #FFFFFF;
+    font-size: 2em;
+    margin: 0;
+}
+
+.astrology-text, .astrology-title {
+    margin: 0;
+    text-align: start;
+}
+
+.astrology-text {
+    margin: 0;
+    font-weight: 500;
+    margin-top: -5px;
+}
+
+.title-right {
+    margin: 0;
+    text-align: end;
+}
+
+.moon-phase {
+    font-size: 1.25em;
+}
+.container-center {
+    justify-content: flex-end;   
+}
+.container-right {
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+@media only screen and (max-width: 1141px) {
+    .container-middle-astrology {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+    .container-center {
+        justify-content: center;
+    }
+    .container-right {
+        grid-column: 3;
+        justify-content: flex-end;
+        justify-self: end;
+    }
+}
+
+@media only screen and (max-width: 768px) { 
+    .container-middle-astrology {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .container-right {
+        grid-column: 1 / span 2;
+        justify-self: center;
+    }
+
+    .container-center {
+        justify-content: flex-end;   
+    }
+}

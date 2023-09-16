@@ -1,6 +1,8 @@
 .search-form {
     display: flex;
     position: relative;
+
+    width: 100%;
 }
 
 .search-form > input, button {
@@ -40,14 +42,12 @@
 
     display: flex;
     flex-direction: column;
-    /* gap: 5px; */
 
 
     background: rgb(253, 190, 17);
 
     width: 100%;
     height: fit-content;
-    /* height: 40px; */
     
     top: 100%;
     margin-top: -5px;

@@ -2,7 +2,6 @@ import React from "react";
 import './HIghestTemp.css';
 
 function HighestTemp(props) {
-    console.log(props)
     const {day, astro, date} = props.forecastDay;
     const {condition} = day;
 

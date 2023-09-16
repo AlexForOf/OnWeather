@@ -1,9 +1,7 @@
 import React from "react";
-import './HourlyDailyBlock.css'
+import './HourlyBlock.css'
 
 function HourlyDailyBlock(props) {
-
-    console.log(props.info)
 
     const {isImperial} = props;
 
@@ -28,19 +26,19 @@ function HourlyDailyBlock(props) {
 
     return (
         <div 
-        className="hourly-dailyblock-container">
+        className="hourly-container">
             <div 
-            className="dailyblock-container-head"
+            className="hourly-container-head"
             onClick={switchVisibleDetails}
             >
                 <div className="container-head-left">
                     <div className="head-left-weather-container">
                         <img className="left-weather-icon" src={icon} />
                         <div className="left-weather-text-container">
-                            <h1 className="hourdaily-text left-weather-tempo">
+                            <h1 className="hourly-text left-weather-tempo">
                                 {isImperial ? `${temp_f}°f` : `${temp_c}°c`}
                             </h1>
-                            <h3 className="hourdaily-text left-weather-text font-weather font-regular">
+                            <h3 className="hourly-text left-weather-text font-weather font-regular">
                                 {text}
                             </h3>
                         </div>
@@ -48,47 +46,47 @@ function HourlyDailyBlock(props) {
 
                 </div>
                 <div className="container-head-right">
-                    <h2 className="hourdaily-text head-right-time">{hour}</h2>
-                    <h3 className="hourdaily-text head-right-date font-regular">{date}</h3>
+                    <h2 className="hourly-text head-right-time">{hour}</h2>
+                    <h3 className="hourly-text head-right-date font-regular">{date}</h3>
                 </div>
             </div>
-            <div className="dailyblock-container-middle">
+            <div className="hourly-container-middle">
                 {alertsBlocks}
             </div>
-            <div className="dailyblock-container-bottom">
-                <h3 className="hourdaily-text container-bottom-title">
+            <div className="hourly-container-bottom">
+                <h3 className="hourly-text container-bottom-title">
                     Information                    
                 </h3>
                 <section className="container-bottom-grid container-bottom-main-info">
                     <div className="container-bottom-element bottom-element-first">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Wind speed:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             {isImperial ? `${wind_mph} m/h` : `${wind_kph} km/h`}
                         </h2>
                     </div>
                     <div className="container-bottom-element bottom-element-first">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Humidity:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             {humidity}%
                         </h2>
                     </div>
                     <div className="container-bottom-element">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Windchill:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
-                            {isImperial ? `${windchill_f}°f` : `${windchill_f}°c`}
+                        <h2 className="hourly-text bottom-element-value">
+                            {isImperial ? `${windchill_f}°f` : `${windchill_c}°c`}
                         </h2>
                     </div>
                     <div className="container-bottom-element">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Wind:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             <span className="list-wind-direction">{wind_dir}</span> on degree {wind_degree}°
                         </h2>
                     </div>
@@ -96,42 +94,42 @@ function HourlyDailyBlock(props) {
                 {isVisibleDetails && 
                 <section className="container-bottom-grid container-bottom-details-info">
                     <div className="container-bottom-element">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Chance of rain:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             {chance_of_rain}%
                         </h2>
                     </div>
                     <div className="container-bottom-element">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Chance of snow:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             {chance_of_snow}%
                         </h2>
                     </div>
                     <div className="container-bottom-element">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Heat index:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             {isImperial ? `${heatindex_f}°f` : `${heatindex_c}°c`}
                         </h2>
                     </div>
                     <div className="container-bottom-element">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Visibility:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             {isImperial ? `${vis_miles} m` : `${vis_km} km`}
                         </h2>
                     </div>
                     <div className="container-bottom-element">
-                        <h3 className="hourdaily-text bottom-element-title font-regular">
+                        <h3 className="hourly-text bottom-element-title font-regular">
                             Pressure:
                         </h3>
-                        <h2 className="hourdaily-text bottom-element-value">
+                        <h2 className="hourly-text bottom-element-value">
                             {isImperial ? `${pressure_in} in` : `${pressure_mb} mB`}
                         </h2>
                     </div>

@@ -20,7 +20,6 @@ function App() {
 
 
   React.useEffect(() => {
-    console.log("Updated")
     // fetch(`https://api.weatherapi.com/v1/current.json?q=${userData.q}&lang=${userData.lang}&key=4c5ff613e6c54a329d6113323231009`)
     // .then(response => response.json())
     // .then(data => changeWeatherResonse(data))
@@ -30,8 +29,6 @@ function App() {
     .then(data => changeWeatherResonse(data))
   }, [userData])
   
-  console.log(isImperial)
-
 
   function changeLocation(event, location) {
     event.preventDefault();
@@ -42,6 +39,7 @@ function App() {
       ['q']: location
     })})
   }
+
   function switchTab(event, id) {
     event.preventDefault();
     changeSelectedTab(id)
