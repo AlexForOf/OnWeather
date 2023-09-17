@@ -13,7 +13,7 @@ import { ImperialContext } from "../ImperialContext";
 
 function Main(props) {
     const [tab, changeTab] = React.useState( (<Realtime info={props.info}/>) )
-    const [info, rerenderInfo] = React.useState(props.info)
+    const [dailyContent, changeDailyContent] = React.useState(props.dailyResponse)
 
     const isImperial = useContext(ImperialContext)
 
@@ -36,7 +36,7 @@ function Main(props) {
                 />)
         }else if (props.currentTab === "Future") {
             changeTab(<Future 
-                info={dailyResponse}
+                info={props.info}
                 isImperial={isImperial} 
                 switchIsImperial={switchImperial}
                 />)

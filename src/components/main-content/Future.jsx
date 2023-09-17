@@ -40,7 +40,7 @@ function Future(props) {
 
     React.useEffect(() => {
         showDays()
-    }, [])
+    }, [props.info])
 
     
 

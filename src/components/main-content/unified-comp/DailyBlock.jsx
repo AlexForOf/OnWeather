@@ -2,7 +2,6 @@ import React from "react";
 import './DailyBlock.css';
 
 function DailyBlock({info, isImperial, showHours}) {
-    console.log(info)
 
     const weekDays = [
         "MO", "TU", "WE", "TH", "FR", "SA", "SU"
@@ -20,7 +19,6 @@ function DailyBlock({info, isImperial, showHours}) {
     const dateDay = date.slice(date.indexOf('-') + 1).replace('-', '/')
 
     const weekDay = weekDays[new Date(date).getDay()]
-    console.log(weekDay)
 
     return (
         <div className="daily-container">

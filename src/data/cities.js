@@ -104,7 +104,7 @@ export default [
         code: "RU"
     },
     {
-        name: "Birmingam",
+        name: "Birmingham",
         code: "UK"
     },
     {

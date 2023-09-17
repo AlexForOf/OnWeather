@@ -6,10 +6,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 import './AirQuality.css';
 
-function AirQuality(props) {
-
-    
-    
+function AirQuality(props) {    
     const todayDate = props.info.current.last_updated;
     const slicedDate = todayDate.slice(todayDate.indexOf('-') + 1, todayDate.indexOf(' '))
 
