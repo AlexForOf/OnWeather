@@ -40,8 +40,7 @@ function Searchbar(props) {
     }
 
     async function showMatches(search) {
-        console.log(import.meta.env.VITE_CITIES_API_KEY)
-        if(search.length > 3) {
+        if(search.length > 2) {
 
         fetch(`https://api.api-ninjas.com/v1/city?name=${search}&min_population=50000&limit=5`,
             {
@@ -52,7 +51,6 @@ function Searchbar(props) {
         )
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             createMatchesDOM(data)    
         })   
         

@@ -13,7 +13,6 @@ import { ImperialContext } from "../ImperialContext";
 
 function Main(props) {
     const [tab, changeTab] = React.useState( (<Realtime info={props.info}/>) )
-    const [dailyContent, changeDailyContent] = React.useState(props.dailyResponse)
 
     const isImperial = useContext(ImperialContext)
 
