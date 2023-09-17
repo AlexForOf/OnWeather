@@ -16,28 +16,37 @@ function Searchbar(props) {
         showMatches(event.target.value)
     }
 
+    function handleSubmit(event, location) {
+        changeLocation(event, location)
+        setPlace('')
+        changeSearchMatchesDOM([])
+    }
+
     function createMatchesDOM(searchMatches) {
         changeSearchMatchesDOM(searchMatches.map((match, index) => {
             const style = {
                 borderTop: index ? "1px solid rgba(68, 68, 68, 0.568)" : "none"
             }
             const searchMatchDOM = (
-                <div
+                <button
                 key={index} 
                 style={style} 
                 className="results-box-element" 
-                onClick={(event) => changeLocation(event, match.name)}>
+                onClick={() => setPlace(match.name)}
+                >
                     <h2 className="box-element-name font-button">
                         {match.name}
                     </h2>
                     <h2 className="box-element-state font-button">
                         {match.country}
                     </h2>
-                </div>
+                </button>
             )
             return searchMatchDOM;
         }))
     }
+
+    console.log(place)
 
     async function showMatches(search) {
         if(search.length > 2) {
@@ -61,7 +70,7 @@ function Searchbar(props) {
 
     return (
         <div className="searchbar-container">
-            <form className="search-form" onSubmit={(event) => changeLocation(event, place)}>
+            <form className="search-form" onSubmit={(event) => handleSubmit(event, place)}>
                 <input 
                 className="search-input font-button"
                 placeholder="City"

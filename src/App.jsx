@@ -33,7 +33,6 @@ function App() {
 
   function changeLocation(event, location) {
     event.preventDefault();
-    console.log(event)
     changeUserData(prevUserData => {
       return({
       ...prevUserData,
