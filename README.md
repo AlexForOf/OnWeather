@@ -1,8 +1,4 @@
-# React + Vite
+# OnWeather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+P.S
+Mark about .env file in repository, I am acknowledged that this is a security leak, this website is not commercial and data in .env file is not an important data, and right now the hosting I am using for website does not work with built application, so I need to include .env file even though it's a memory leak
