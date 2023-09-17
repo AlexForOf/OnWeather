@@ -57,13 +57,6 @@ function Searchbar(props) {
     }else{
         changeSearchMatchesDOM([])
     }
-        // if(search.length >= 1){
-        //     const searchMatches = cities.filter((city, index) => {
-        //         return city.name.match(search)
-        //     })
-        // }else{
-        //     changeSearchMatchesDOM([])
-        // }
     }
 
     return (
