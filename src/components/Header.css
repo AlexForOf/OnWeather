@@ -41,10 +41,17 @@
 .header-location {
     color: #FFFFFF;
     align-items: center;
+    margin-right: 10px;
 }
 
-.header-location > h1 {
+.location-text {
     margin: 0;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    /* max-width: 400px; */
 }
 
 .header-location > img {
@@ -63,6 +70,12 @@
     color: #ffffffb2;
 }
 
+@media only screen and (max-width: 1110px) {
+    /* .location-text {
+        max-width: 300px;
+    } */
+}
+
 @media only screen and (max-width: 930px){
     .header-logo-text {
         display: none;
@@ -76,5 +89,23 @@
 
     .location-country {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .location-text { 
+        max-width: 100px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .location-text { 
+        max-width: 50px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .location-text { 
+        max-width: 25px;
     }
 }

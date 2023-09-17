@@ -1,1 +1,1 @@
-export default ["Realtime", "Forecast", "Future", "History"]
+export default ["Realtime", "Forecast", "Future"]
