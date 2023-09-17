@@ -4,7 +4,7 @@ import './DailyBlock.css';
 function DailyBlock({info, isImperial, showHours}) {
 
     const weekDays = [
-        "MO", "TU", "WE", "TH", "FR", "SA", "SU"
+        "SU", "MO", "TU", "WE", "TH", "FR", "SA"
     ]
 
 
@@ -18,6 +18,7 @@ function DailyBlock({info, isImperial, showHours}) {
 
     const dateDay = date.slice(date.indexOf('-') + 1).replace('-', '/')
 
+    console.log(new Date(date).getDay())
     const weekDay = weekDays[new Date(date).getDay()]
 
     return (

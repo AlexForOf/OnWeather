@@ -29,9 +29,17 @@
         box-sizing: border-box;
         padding: 10px;
     }
+    .future-return {
+        margin-top: -15px;
+    }
 }
 @media only screen and (max-width: 1141px) {
     .container-future {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 1360px) {
+    .future-return {
+        margin-left: 0;
     }
 }
