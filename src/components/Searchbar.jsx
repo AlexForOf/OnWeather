@@ -1,7 +1,11 @@
 import React from "react";
 import './Searchbar.css';
 
+/* Deprecated
+
 import cities from "../data/cities";
+
+*/
 
 function Searchbar(props) {
     
