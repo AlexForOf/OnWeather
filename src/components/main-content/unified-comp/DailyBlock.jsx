@@ -18,7 +18,6 @@ function DailyBlock({info, isImperial, showHours}) {
 
     const dateDay = date.slice(date.indexOf('-') + 1).replace('-', '/')
 
-    console.log(new Date(date).getDay())
     const weekDay = weekDays[new Date(date).getDay()]
 
     return (

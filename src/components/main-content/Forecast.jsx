@@ -4,7 +4,7 @@ import HourlyDailyBlock from "./unified-comp/HourlyBlock";
 
 function Forecast(props) {
     const hours = props.info.forecast.forecastday[0].hour;
-    const curDate = new Date();
+    const curDate = new Date(props.info.location.localtime);
     
     const filteredHours = hours.filter((hour) => {
         const gotHours = new Date(hour.time)

@@ -5,7 +5,11 @@ import Forecast from "./main-content/Forecast";
 import Future from "./main-content/Future";
 import './Main.css';
 
+/* Deprecated
+
 import dailyResponse from '../data/dailyResponse.json'
+
+*/
 
 import { useContext } from "react";
 import { ImperialContext } from "../ImperialContext";

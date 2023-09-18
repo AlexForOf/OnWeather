@@ -1,9 +1,12 @@
 import './App.css';
 import React from 'react';
 
-// Deprecated
+/* Deprecated
+
 import data from './data/data1';
 import daily from './data/dailyResponse.json'
+
+*/
 
 import Header from './components/Header';
 import Navbar from './components/Navbar';
@@ -34,7 +37,9 @@ function App() {
       changeIsReadyDailyResponse(true)
     })
     .catch((error) => {
-      console.log(error)
+      // Do nothing in order to not display in console anything
+      // TODO:
+      // Make a functionality for displaying a label with not finding any location by query
     })
   }, [userData])
   

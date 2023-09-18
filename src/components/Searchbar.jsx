@@ -46,8 +46,6 @@ function Searchbar(props) {
         }))
     }
 
-    console.log(place)
-
     async function showMatches(search) {
         if(search.length > 2) {
 
