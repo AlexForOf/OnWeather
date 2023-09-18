@@ -1,5 +1,7 @@
 import './App.css';
 import React from 'react';
+
+// Deprecated
 import data from './data/data1';
 import daily from './data/dailyResponse.json'
 
@@ -23,10 +25,16 @@ function App() {
 
   React.useEffect(() => {
     fetch(`https://api.weatherapi.com/v1/forecast.json?q=${userData.q}&days=12&lang=${userData.lang}&alerts=yes&aqi=yes&key=${userData.API_KEY}`)
-    .then(response => response.json())
-    .then(data => {
-      changeWeatherResonse(data)
+    .then((response) => {
+      if(response.ok) return response.json()
+      throw new Error(response.status)
+    })
+    .then((responseJSON) => {
+      changeWeatherResonse(responseJSON)
       changeIsReadyDailyResponse(true)
+    })
+    .catch((error) => {
+      console.log(error)
     })
   }, [userData])
   
